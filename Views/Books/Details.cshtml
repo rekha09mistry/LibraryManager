@@ -1,0 +1,27 @@
+@model LibraryManager.Models.Book
+@{
+    ViewData["Title"] = "Book Details";
+}
+<h2>@Model.Title</h2>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-3">Author</dt>
+        <dd class="col-sm-9">@Model.Author</dd>
+
+        <dt class="col-sm-3">Published Year</dt>
+        <dd class="col-sm-9">@Model.PublishedYear</dd>
+
+        <dt class="col-sm-3">Genre</dt>
+        <dd class="col-sm-9">@Model.Genre</dd>
+
+        <dt class="col-sm-3">Available</dt>
+        <dd class="col-sm-9">@Model.IsAvailable</dd>
+
+        <dt class="col-sm-3">Description</dt>
+        <dd class="col-sm-9">@Model.Description</dd>
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Back</a>
